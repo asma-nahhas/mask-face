@@ -1,1 +1,0 @@
-web: gunicorn keras_server:app
