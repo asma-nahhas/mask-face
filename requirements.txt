@@ -3,4 +3,5 @@ Flask-Cors==3.0.8
 Flask-RESTful==0.3.8
 requests==2.25.1
 gunicorn
-
+keras==2.8.0
+Keras-Preprocessing==1.1.2
