@@ -13,10 +13,6 @@ itsdangerous==1.1.0
 jsonschema==3.2.0
 keras==2.8.0
 Keras-Preprocessing==1.1.2
-libclang==13.0.0
-lxml==4.6.1
-Markdown==3.3.6
-MarkupSafe==1.1.1
 mtcnn==0.1.1
 numpy==1.20.1
 oauthlib==3.2.0
@@ -36,4 +32,3 @@ tensorflow-io-gcs-filesystem==0.24.0
 urllib3==1.26.8
 virtualenv==20.0.20
 websocket-client==1.2.3
-zipp==3.7.0
