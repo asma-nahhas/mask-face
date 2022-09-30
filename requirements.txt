@@ -5,3 +5,5 @@ requests==2.25.1
 gunicorn
 keras==2.8.0
 Keras-Preprocessing==1.1.2
+tensorflow
+tensorflow-io-gcs-filesystem==0.24.0
