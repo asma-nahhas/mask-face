@@ -103,8 +103,8 @@
     
     <div id="input">
         <div id="form-input" >
-            <!-- <form id="login-detail" action="/signup_user" method="POST"> -->
-            <form id="login-detail" >
+           <form id="login-detail" action="/signup_user" method="POST"> 
+          <!--  <form id="login-detail" >-->
                 <div class="form-group" >
                     <label for="email_address" style="color:black; font-size:20pt;margin-bottom:10px;">Email address </label>
                     <input type="email" class="form-control" name ="exampleInputEmail1" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="font-size:17pt; height:40px;" required>
@@ -124,7 +124,7 @@
                 <div id ="face-input">
                     <video id="myVideo"  autoplay></video>
                 </div>
-                <button id="button" class="btn btn-success" style="vertical-align:middle"> Sign up  </button>
+                <button id="button" class="btn btn-success" style="vertical-align:middle"> Sign up </button>
         </div>
         
     </div>
@@ -162,17 +162,29 @@
             email = document.getElementById("exampleInputEmail1").value
             pass = document.getElementById("exampleInputPassword1").value
             name = document.getElementById("name").value
+			console.log("Asma")
 
             let formdata = new FormData();
             formdata.append("image", file);
             formdata.append("email", email);
             formdata.append("pass", pass);
             formdata.append("name", name);
+			console.log(name)
+
 
             let xhr = new XMLHttpRequest();
-            xhr.open('POST', 'http://localhost:5000/signup_user', true);
+
+            xhr.open('POST', 'http://127.0.0.1:5000/signup_user', true);
+			xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+
+
             xhr.onload = function () {
+						console.log("before");
+
+			console.log("after");
+
                 if (this.status === 200) {
+				console.log(this.responseText);
                     var data = JSON.parse(this.responseText);
                     console.log(this.response);
                     if(data['duplicate'] == true){
@@ -190,9 +202,12 @@
                     } 
                 }
                 else {
+				   console.error("soso error");
+
                     console.error(xhr);
                 }
             };
+			console.log("error before loaing");
 
             xhr.send(formdata);
         }
@@ -206,6 +221,9 @@
 
         //Get the image from the canvas
         function sendImagefromCanvas() {
+            console.log(v.videoWidth);
+
+            console.log(v.videoHeight);
 
             //Make sure the canvas is set to the current video size
             imageCanvas.width = v.videoWidth;
@@ -219,13 +237,13 @@
 
         //Take a picture on click
         v.onclick = function () {
-            console.log('click');
+            console.log('click video');
             sendImagefromCanvas();
         };
 
         //Take a picture on click
         b.onclick = function () {
-            console.log('click');
+            console.log('click button');
             sendImagefromCanvas();
         };
 
