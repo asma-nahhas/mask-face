@@ -28,3 +28,4 @@ tensorflow-io-gcs-filesystem==0.24.0
 urllib3==1.26.8
 virtualenv==20.0.20
 websocket-client==1.2.3
+Flask-SQLAlchemy
