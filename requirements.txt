@@ -3,10 +3,10 @@ cachetools==5.0.0
 dict2xml==1.7.0
 dicttoxml==1.7.4
 distlib==0.3.0
-filelock==3.0.12
 Flask==1.1.2
 Flask-Cors==3.0.8
 Flask-RESTful==0.3.8
+flatbuffers==2.0
 importlib-metadata==4.11.3
 iniconfig==1.1.1
 jsonschema==3.2.0
